@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tanggal dan Jam</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f2f2f2;
+    }
+    #clock {
+      font-size: 36px;
+    }
+  </style>
+  <script>
+    function updateTime() {
+      var now = new Date();
+      var date = now.toDateString();
+      var time = now.toLocaleTimeString();
+      document.getElementById("clock").innerHTML = date + "<br>" + time;
+    }
+    setInterval(updateTime, 1000);
+  </script>
+</head>
+<body onload="updateTime()">
+  <div id="clock"></div>
+</body>
+</html>
